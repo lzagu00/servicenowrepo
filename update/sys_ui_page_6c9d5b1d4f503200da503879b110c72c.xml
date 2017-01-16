@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>homepages</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_71876_crud_app_CRUD Home.do</endpoint>
+        <html><![CDATA[<html>
+Hello CRUD
+<div id="stylized" class="myform">
+<g:ui_form id="form" name="form">
+<h1>Sign-up form</h1>
+<p>Please sign up here for an fun and informative session</p>
+
+<label>Name<span class="small">Name</span>
+</label>
+<input type="text" name="name" id="name" />
+<br/>
+<label>Address<span class="small">Address</span>
+</label>
+<input type="text" name="address" id="address" />
+
+<label>Phone<span class="small">Phone Number</span>
+</label>
+<input type="text" name="phone" id="phone" />
+	
+<label>Active<span class="small">Active</span>
+</label>
+<select name="active" id="active">
+	<option value="true">True</option>
+	<option value="false">False</option>
+</select>	
+<!--<input type="text" name="phone" id="phone" />-->
+	
+<label>Email<span class="small">Email</span>
+</label>
+<input type="text" name="email" id="email" />	
+<br/>
+<button type="submit">Submit</button>
+<div class="spacer"></div>
+</g:ui_form>
+</div>
+</html>]]></html>
+        <name>CRUD Home</name>
+        <processing_script><![CDATA[var crud = new GlideRecord("x_71876_crud_app_crud_table");
+crud.name = name;
+crud.address = address;
+crud.phone = phone;
+crud.active = active;
+crud.email = email;
+
+crud.insert();
+
+alert(' '+crud);
+//attendee.first_name = fname;
+//attendee.last_name = lname;
+//attendee.email = email;
+//attendee.phone = phone;
+//attendee.insert()]]></processing_script>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-01-13 05:39:42</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>6c9d5b1d4f503200da503879b110c72c</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>CRUD Home</sys_name>
+        <sys_package display_value="CRUD App" source="x_71876_crud_app">abeb12d94f103200da503879b110c72d</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CRUD App">abeb12d94f103200da503879b110c72d</sys_scope>
+        <sys_update_name>sys_ui_page_6c9d5b1d4f503200da503879b110c72c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-01-13 05:54:59</sys_updated_on>
+    </sys_ui_page>
+</record_update>
